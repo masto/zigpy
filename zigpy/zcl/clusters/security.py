@@ -77,7 +77,7 @@ class IasZone(Cluster):
     client_commands = {
         0x0000: (
             "status_change_notification",
-            (ZoneStatus, t.bitmap8, t.uint8_t, t.uint16_t),
+            (ZoneStatus, t.bitmap8, t.Optional(t.uint8_t), t.Optional(t.uint16_t)),
             False,
         ),
         0x0001: ("enroll", (ZoneType, t.uint16_t), False),
